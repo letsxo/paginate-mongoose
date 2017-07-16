@@ -1,0 +1,15 @@
+{
+  "name": "paginate-mongoose",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "XO",
+  "url": "https://github.com/letsxo/paginate-mongoose",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "mongo-cursor-pagination": "^5.0.0"
+  }
+}
