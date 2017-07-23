@@ -3,7 +3,7 @@ var mongoPaging = Promise.promisifyAll(require('mongo-cursor-pagination'));
 
 module.exports = function paginatePlugin(schema, options) {
 
-  schema.static('findWithPagination', function(req, query, paginatedField, projection, limit) {
+  schema.static('findWithPagination', function(req, query, paginatedField, projection, limit, sort) {
     return mongoPaging.findWithReqAsync(
       req,
       this.collection,
@@ -11,7 +11,8 @@ module.exports = function paginatePlugin(schema, options) {
         query: query || {},
         paginatedField: paginatedField || '_id',
         fields: projection || { _id: 1 },
-        limit: limit || 10
+        limit: limit || 10,
+        sortAscending: sort || false
       }
     );
   });
