@@ -10,6 +10,7 @@
   "url": "https://github.com/letsxo/paginate-mongoose",
   "dependencies": {
     "bluebird": "^3.5.0",
+    "lodash": "^4.17.4",
     "mongo-cursor-pagination": "^5.0.0"
   }
 }
